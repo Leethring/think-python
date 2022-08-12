@@ -13,10 +13,10 @@ def petal(t, r, a):
     r: arc radius. Determinate the length of a petal
     a: arc angle. Determinate the width of a petal
     """
-    arc(t, r, a)
     turnBack = 180 - a
-    t.lt(turnBack)
-    arc(t, r, a)
+    for i in range(2):
+        arc(t, r, a)
+        t.lt(turnBack)
 
 def flower(t, r, a, p):
     """Draws a flower.
@@ -29,8 +29,6 @@ def flower(t, r, a, p):
     petal_angle = 360 / p
     for i in range(p):
         petal(t, r, a)
-        turnBack = 180 - a
-        t.lt(turnBack)
         t.lt(petal_angle)
 
 
@@ -40,7 +38,7 @@ if __name__ == '__main__':
 
     print('You will create a flower.')
     print('You need to input a arc length and a arc angle to form a petal.')
-    print('You need to input petal angle to form a flower.')
+    print('You need to input the number of a flower.')
     # todo: Get the arc length, arc angle, petal angle from input 
     print("Please input the arc radius: ")
     arc_radius_str = input()
