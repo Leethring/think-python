@@ -54,9 +54,6 @@ if __name__ == "__main__":
 
     tri1 = triangle(bob, baseLine, angleT)
     drawPolymer(tri1, n)
-    tri1.turtle.clear()
-    tri1.turtle.fd(100)
-    tri1.turtle.home()
 
     turtle.mainloop()
     
