@@ -1,6 +1,6 @@
 # Think Python
 
-This folder include all code script about the book: *Think Python*.
+This folder include all code script about the book: *Think Python* by Allen B. Downey
 
 ## Ex Folder
 
