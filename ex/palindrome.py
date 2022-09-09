@@ -1,3 +1,5 @@
+# palindrome.py - Test the palindrome of words
+
 # Return the first letter of a word
 def first(word):
     return word[0]
@@ -16,18 +18,17 @@ def is_palindrome(word):
     word_first = first(word)
     word_last = last(word)
     # If the first letter is different from the last letter
-    # It is not a palindrome
+    # Return False. It is not a palindrome
     if word_first != word_last:
         return False
     else:
         # If the final unit of word is an empty string
-        # It's a palindrome
+        # Return True. It's a palindrome
         if word_middle == '':
             return True
         else:
-            # The first letter is equal to the last letter
-            # We check the middle characters of a word
-            # by using recursive 
+            # Return palindrome function to repeat 
+            # the substring of a word to check 
             return is_palindrome(word_middle)
 
 def is_palindrome_book(word):
