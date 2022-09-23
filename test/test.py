@@ -1,14 +1,15 @@
-def factorial(n):
-    space = ' ' * (4*n)
-    print(space, 'factorial', n)
-    if n == 0:
-        print(space, 'returning 1')
-        return 1
-    else:
-        recurse = factorial(n - 1)
-        result = n * recurse
-        print(space, 'returning', result)
-        return result
+# Estimate the square root of a
+# by using Newton's method
+# y = (x + a/x) / 2
+# x = y
 
+a = 4
+x = 1
+precision = 0.00001
 
-print(factorial(7))
+while True:
+    print(x)
+    y = (x + a/x) / 2
+    if abs(x - y) < precision:
+        break
+    x = y
